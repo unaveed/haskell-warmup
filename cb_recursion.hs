@@ -8,3 +8,7 @@ bunnyEars2 i =
 		else if i `mod` 2 == 0 
 			then 3 + bunnyEars2(i-1) 
 			else 2 + bunnyEars2(i-1)
+
+-- count7
+count7helper x | x == 7 = 1 | otherwise = 0
+count7  n | n < 7 = 0 | otherwise  = count7helper(n `mod` 10) + count7(quot n 10)
